@@ -13,9 +13,8 @@ class Player
     while discard_input
       puts "Which cards would you like to discard?"
       @hand.display_hand
-
       discard = gets.chomp
-      break if discard.nil?
+      break if discard.empty?
 
       card_suit = discard.split(":")[0].to_sym
       card_val = discard.split(":")[1].to_i
